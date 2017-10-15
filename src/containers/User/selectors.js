@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-const selectUserDomain = () => state => state.get('user');
+const selectUserDomain = () => state => state.get('User');
 
 const selectUser = () => createSelector(
   selectUserDomain(),

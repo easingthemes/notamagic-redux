@@ -3,7 +3,7 @@ import userReducer from '../containers/User/reducer';
 
 const REDUCERS = {
   global: globalReducer,
-  user: userReducer
+  User: userReducer
 };
 
 export default REDUCERS;

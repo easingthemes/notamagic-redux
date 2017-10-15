@@ -4,40 +4,20 @@ import { connect } from "react-redux";
 
 import "./styles.css";
 
-import selectUser from './selectors';
-import {
-  getUser,
-} from './actions';
+import selectGlobal from './selectors';
 
 class App extends Component {
-  componentDidMount() {
-    this.props.handleGetUser();
-  }
-
   render() {
-    const { name } = this.props;
-
     return (
-      <div>
-        Global Page: {name}
-      </div>
+      <div>App</div>
     );
   }
 }
 
 App.propTypes = {
-  children: PropTypes.node,
-  handleGetUser: PropTypes.func,
-  user: PropTypes.object
+  children: PropTypes.node
 };
 
-const mapStateToProps = selectUser();
+const mapStateToProps = selectGlobal();
 
-function mapDispatchToProps(dispatch) {
-  return {
-    handleGetUser: (data) => dispatch(getUser(data)),
-    dispatch,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, {})(App);

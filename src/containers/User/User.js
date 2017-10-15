@@ -8,10 +8,28 @@ import {
   getUser,
 } from './actions';
 
-
 class User extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { counter: 0 };
+  }
+
   componentDidMount() {
-    this.props.handleGetUser();
+    //const { dataAttrs } = this.props;
+    // console.log('dataAttrs', dataAttrs);
+
+    //this.props.handleSetWidget('User', dataAttrs);
+
+    //this.props.handleGetUser(this.state.counter);
+  }
+
+  handleClick() {
+    // console.log('click');
+    this.setState({
+      counter: this.state.counter + 1
+    });
+    this.props.handleGetUser(this.state.counter);
   }
 
   render() {
@@ -19,7 +37,7 @@ class User extends Component {
 
     return (
       <div>
-        <div>widget user: {name}</div>
+        <div onClick={() => this.handleClick()}>widget user: {name}</div>
         <Navbar path={path} />
       </div>
     );

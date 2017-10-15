@@ -14,9 +14,9 @@ function userReducer(state = initialState, action) {
       return state;
 
     case GET_USER:
-      const { name } = action.payload;
+      const { name, i } = action.payload;
       return state
-        .set('name', name);
+        .set('name', name + i);
     default:
       return state;
   }

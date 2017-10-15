@@ -1,0 +1,15 @@
+/*
+ Theme Name:   Twenty Seventeen Child - Redux, React
+ Theme URI:    https://notamagic.com/twentyfourteen-child/
+ Description:  React with Redux Widgets in WP theme
+ Author:       Dragan Filipovic
+ Author URI:   https://notamagic.com
+ Template:     twentyseventeen
+ Version:      1.0.0
+ Tags:         react, redux, widgets
+ Text Domain:  twenty-seventeen-child
+*/
+
+body:before {
+  content: 'before';
+}

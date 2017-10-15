@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
 
+import './styles.css';
+
 class Navbar extends React.Component {
 
 	constructor (props) {

@@ -4,6 +4,9 @@
   "proxy": "http://localhost:3001",
   "devDependencies": {
     "node-mock-server": "^0.18.2",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.1",
+    "pem": "^1.12.3",
     "react-scripts": "1.0.14"
   },
   "dependencies": {
@@ -12,6 +15,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
+    "react-display-name": "^0.2.3",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
@@ -23,9 +27,14 @@
     "reselect": "^3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build && npm run create-manifest",
     "test": "react-scripts test --env=jsdom",
-    "build": "react-scripts build",
-    "api": "node api/index.js"
+    "api": "node api/index.js",
+    "api-debug": "node $NODE_DEBUG_OPTION api/index.js",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "create-manifest": "node tools/getAssets.js"
   }
 }

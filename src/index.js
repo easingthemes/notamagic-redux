@@ -1,8 +1,8 @@
 import configureStore from './store/configureStore';
 import registerServiceWorker from './registerServiceWorker';
 
-import renderPage from './config/renderPage';
-import renderWidgets from './config/renderWidgets';
+import renderPage from './setup/renderPage';
+import renderWidgets from './setup/renderWidgets';
 
 const store = configureStore();
 

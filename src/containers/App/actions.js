@@ -1,11 +1,6 @@
-import axios from 'axios';
-
-import { filterUser } from '../../helpers/filterUser';
-
 import {
-  API_URL,
   DEFAULT_ACTION,
-  GET_USER,
+  SET_WIDGET,
 } from './constants';
 
 export function defaultAction() {
@@ -14,20 +9,14 @@ export function defaultAction() {
   };
 }
 
-export function getUser() {
+export function setWidget(name) {
   return function(dispatch) {
-    axios.get(`${API_URL}/posts/1`)
-    .then(response => {
-      dispatch({
-        type: GET_USER,
-        payload: filterUser(response.data)
-      });
-    })
-    .catch(error => {
-      dispatch({
-        type: GET_USER,
-        payload: error
-      });
-    })
+    dispatch({
+      type: SET_WIDGET,
+      payload: {
+        name: name,
+        status: 'loaded'
+      }
+    });
   }
 }
