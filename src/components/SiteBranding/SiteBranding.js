@@ -9,22 +9,30 @@ import './style.css';
  * @class SiteBranding
  */
 export class SiteBranding extends Component {
-  constructor(props) {
- 		super(props);
- 		this.state = {
- 			isLoading: true
- 		};
- 	}
+  renderTitle() {
+    const { titleUrl, titleText, is_front_page } = this.props.dataAttrs;
+    const Element = is_front_page ? 'h1' : 'p';
 
-  componentDidMount () {
+    return (
+      <Element className="site-title">
+        <a href={titleUrl} rel="home">
+          {titleText}
+        </a>
+      </Element>
+    );
+  }
 
-	}
-
-	render() {
+  render() {
+    const { description } = this.props.dataAttrs;
 		return (
-			<div className='c-SiteBranding'>
-				<h1>SiteBranding</h1>
-			</div>
+      <div className="wrap">
+        <div className="site-branding-text">
+          {this.renderTitle()}
+          <p className="site-description">
+            {description}
+          </p>
+        </div>
+      </div>
 		);
 	}
 }

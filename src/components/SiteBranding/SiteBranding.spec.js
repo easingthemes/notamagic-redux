@@ -13,9 +13,4 @@ describe('<SiteBranding />', () => {
   it('renders without crashing', () => {
     shallow(<SiteBranding />);
   });
-
-  it('renders div', () => {
-    const wrapper = shallow(<SiteBranding />);
-    expect(wrapper.find('div')).to.have.length(1);
-  });
 });

@@ -9,7 +9,7 @@ import WIDGETS from '../config/widgets';
 
 const initialState = fromJS({});
 
-Object.keys(WIDGETS).map(key => {
+Object.keys(WIDGETS).forEach(key => {
   const combinedReducers = {
     dataAttrs: widgetReducers(key)
   };
