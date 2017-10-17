@@ -38,16 +38,11 @@ export class SiteBranding extends Component {
 }
 
 SiteBranding.propTypes = {
-	str: PropTypes.string,
-	oneof: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.number
-	])
+  dataAttrs: PropTypes.object
 };
 
 SiteBranding.defaultProps = {
-	str: 'string',
-	oneof: 0
+  dataAttrs: {}
 };
 
 export default SiteBranding;
