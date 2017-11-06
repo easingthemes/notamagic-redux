@@ -1,0 +1,28 @@
+@import "../../../common/scss/mixins";
+
+.c-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__link {
+    @extend %clearfix;
+
+    padding: 0 10px;
+  }
+
+  &__image {
+    width: 30px;
+    height: auto;
+    float: left;
+  }
+
+  &__label {
+    float: left;
+    width: 300px;
+    font-family: 'Pacifico', cursive;
+    line-height: 30px;
+    padding-left: 10px;
+  }
+}

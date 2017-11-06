@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
-import Navbar from '../../components/Navbar/Navbar';
 
 import selectUser from './selectors';
 import {
@@ -33,12 +32,11 @@ class User extends Component {
   }
 
   render() {
-    const { name, path } = this.props;
+    const { name } = this.props;
 
     return (
       <div>
         <div onClick={() => this.handleClick()}>widget user: {name}</div>
-        <Navbar path={path} />
       </div>
     );
   }

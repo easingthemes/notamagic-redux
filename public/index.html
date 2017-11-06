@@ -6,22 +6,38 @@
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="http://localhost:8888/notamagic.com/platform/wp-content/themes/twentyseventeen/style.css?ver=4.8.2" />
     <title>Widgets</title>
   </head>
-  <body>
+  <body class="home page-template-default page page-id-34 logged-in wp-custom-logo twentyseventeen-front-page has-header-image page-two-column colors-light">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <h2>root</h2>
     <div id="root"></div>
-    <h2>r-widget User</h2>
-    <div class="r-widget" data-r-widget="User"></div>
+    <div class="custom-header" style="position:relative;">
+      <div
+        class="r-widget"
+        data-r-widget="HeaderMedia"
+        data-add="true"
+        data-r-attrs='{"url":"http:\/\/localhost:8888\/notamagic.com\/platform\/wp-content\/uploads\/2017\/10\/notamagic-dragan-filipovic-redux.jpg","width":1920,"height":873,"alt":"hipster slide image || dragan filipovic"}'>
+      </div>
+        <div class="c-widget" data-r-widget="Logo" data-src="http://localhost:8888/notamagic.com/platform/wp-content/uploads/2017/10/logo.png" data-url="http://localhost:8888/notamagic.com/" data-alt="notamagic">
+            <a href="http://localhost:8888/notamagic.com/" title="notamagic" class="c-logo__link">
+              <img src="http://localhost:8888/notamagic.com/platform/wp-content/uploads/2017/10/logo.png" alt="notamagic" class="c-logo__image">
+            </a>
+        </div>
 
-    <h2>r-widget Loader</h2>
-    <div class="r-widget" data-r-widget="Loader"></div>
-
-    <h2>r-widget HeaderMedia</h2>
-    <div class="r-widget" data-r-widget="HeaderMedia" data-add="true" data-r-attrs='{"url":"http:\/\/localhost:8888\/notamagic.com\/platform\/wp-content\/uploads\/2017\/10\/header-new.jpg","width":2000,"height":1200,"alt":"My new header image Title"}'></div>
-
+        <div class="site-branding"
+             data-r-widget="SiteBranding"
+             data-is_front_page="1"
+             data-is_customize_preview=""
+             data-show_screen_reader=""
+             data-title-url="http://localhost:8888/notamagic.com/"
+             data-title-text="notamagic"
+             data-description="Dragan Filipovic"
+             data-screen_reader_text="Scroll down to content"
+             data-screen_reader_svg="<svg class=&quot;icon icon-arrow-right&quot; aria-hidden=&quot;true&quot; role=&quot;img&quot;> <use href=&quot;#icon-arrow-right&quot; xlink:href=&quot;#icon-arrow-right&quot;></use> </svg>">
+        </div>
+    </div>
   </body>
 </html>
