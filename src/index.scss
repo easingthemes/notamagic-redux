@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.h-wrap {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 700px;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.h-wrap:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+@media screen and (min-width: 48em) {
+  .h-wrap {
+    max-width: 1000px;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}

@@ -14,7 +14,7 @@ export class SiteBranding extends Component {
     const Element = is_front_page ? 'h1' : 'p';
 
     return (
-      <Element className="site-title">
+      <Element className="c-site-branding__title">
         <a href={titleUrl} rel="home">
           {titleText}
         </a>
@@ -25,10 +25,10 @@ export class SiteBranding extends Component {
   render() {
     const { description } = this.props.dataAttrs;
 		return (
-      <div className="wrap">
-        <div className="site-branding-text">
+      <div className="c-site-branding">
+        <div className="c-site-branding__text wrap">
           {this.renderTitle()}
-          <p className="site-description">
+          <p className="c-site-branding__description">
             {description}
           </p>
         </div>
